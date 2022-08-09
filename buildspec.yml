@@ -12,10 +12,7 @@ phases:
     - mvn clean
     - mvn validate
     - echo Build ends on 'date'
-  build:
-    on-failure: ABORT
-    commands:
-    - echo Build start on 'date'
+  echo Build start on 'date'
     - mvn compile
     - mvn test
     - echo Build ends on 'date'
