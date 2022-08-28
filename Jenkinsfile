@@ -12,9 +12,7 @@ pipeline {
         AWS_EB_APP_VERSION = "${BUILD_ID}"
         AWS_EB_ENVIRONMENT = "Java-app1-env"
 
-        SONAR_IP = "54.226.50.200"
-        SONAR_TOKEN = "sqp_d780c4fbce371fd81d22660309692d27bb28c75f"
-
+       
     }
 
     stages {
@@ -47,19 +45,6 @@ pipeline {
                 always {
                     junit '**/target/surefire-reports/TEST-*.xml'
                 }
-            }
-        }
-
-        stage('Quality Scan'){
-            steps {
-                sh '''
-
-             mvn clean verify sonar:sonar \
-               -Dsonar.projectKey=online-ahmed-asiri-B2D2 \
-               -Dsonar.host.url=http://52.23.193.18 \
-               -Dsonar.login=sqp_d780c4fbce371fd81d22660309692d27bb28c75f
-
-             '''
             }
         }
 
