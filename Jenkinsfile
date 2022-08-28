@@ -8,9 +8,9 @@ pipeline {
 
         AWS_S3_BUCKET = "ahmed1-bucket"
         ARTIFACT_NAME = "hello-world.jar"
-        AWS_EB_APP_NAME = "java-app1"
+        AWS_EB_APP_NAME = "ahmed-java"
         AWS_EB_APP_VERSION = "${BUILD_ID}"
-        AWS_EB_ENVIRONMENT = "Java-app1-env"
+        AWS_EB_ENVIRONMENT = "Ahmedjava-env"
 
        
     }
